@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300;400&display=swap');
+
+$prime-color: #4dd7c4;
+$dark-prime-color: #3fb2ab;
+$blue-text: #183c68;
+$white-text: #fff;
+$dark-text: #000;
+
+//common styles
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    li {
+        list-style: none;
+    }
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    color: $white-text;
+    font-size: 18px;
+}
+.responsive_img {
+    max-width: 100%;
+}
+.container {
+    max-width: 76%;
+    margin: auto;
+}
+
+//media 
+@media screen and (max-width: 1320px) {
+    .menu_list {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+//header
+
+header {
+    background-color: rgb(197, 193, 193);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+.nav_scrolled {
+    background-color: $white-text;
+    color: $blue-text;
+}
+.header_container {
+    max-width: 95%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu {
+    display: flex;
+    gap: 2rem;
+}
+.menu_list {
+    transition: 0.5s;
+}
+.menu:hover > .menu_list {
+    opacity: 0.3;
+}
+.menu:hover > .menu_list:hover {
+    opacity: 1;
+}
+.button {
+    background-color: $prime-color;
+    color: $white-text;
+    padding: 0.8rem 2rem;
+    border-radius: 0.8em;
+    transition: 0.5s;
+}
+.button:hover {
+    background-color: $dark-prime-color;
+}
+
+//home
+
+#home {
+    background-color: rgb(197, 193, 193);
+    min-height: 36.7em;
+    min-width: 100%;
+    border-bottom-left-radius: 4em;
+    border-bottom-right-radius: 4em;
+    margin-top: 3.4em;
+}
+.home_container {
+    max-width: 30em;
+    padding-top: 4em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+.home_title {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+//about 
+#about {
+    color: $dark-text;
+    min-height: 35em;
+}
+.block_title {
+    font-weight: bold;
+    font-size: 2.2em;
+    margin-top: 2.5em;
+    padding: 0.4em;
+}
+.block_content,
+.block_title {
+    text-align: center;
+} 
+.about_image {
+    height: 12em;
+    width: 14em;
+}
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    margin-top: 4em;
+    flex-wrap: wrap;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 22em;
+    align-items: center;
+    max-width: 20em;
+    margin-inline: auto;
+}
+.card_title {
+    font-size: 1.8em;
+}
+.card_content {
+    text-align: center;
+}
+.custom_card_title {
+    margin-top: 0;
+}
+.card_button {
+    margin-top: 2em;
+}
+
+//about2
+.about_2 {
+    margin-top: 9em;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+.about_block_2 {
+    gap: 2.5em;
+    margin-inline: auto;
+}
+.about_dashboard {
+    margin-inline: auto;
+}
+.cut_image {
+    border-radius: 0.8em;
+}
+.cut_image_left {
+    border-top-left-radius: 0.8em;
+    border-bottom-left-radius: 0.8em;
+} 
+.about_block {
+    display: flex;
+    flex-direction: column;
+}
+.about_card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+//about3
+.about_3 {
+    margin-top: 5em;
+    display: flex;
+    gap: 2em;
+    background-color: #f2f6fc;
+    border-radius: 0.8em;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: max-content;
+}
+.about_video {
+    margin-inline: auto;
+}
+.about_block_3 {
+    padding: 1em 1em 1em 0;
+    gap: 1.5em;
+    max-width: 30em;
+    margin-inline: auto;
+}
+.about_wrap {
+    padding: 3em 0;
+}
+.about_block_title {
+    font-size: 1.6em;
+}
+
+//price
+#price {
+    color: $dark-text;
+}
+.price_cards {
+    display: flex;
+    justify-content: space-between;
+    margin: 4em 0;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+.price_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1.4em;
+    gap: 2em;
+    align-items: center;
+    padding: 3em 1.5em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: 0.5s;
+    border-bottom: 0.2em solid rgba(0, 0, 0, 0);
+    margin-inline: auto;
+}
+.price_card:hover {
+    border-bottom: 0.2em solid $dark-prime-color;
+}
+.price_list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    li {
+        position: relative;
+    }
+    li:before {
+        content: "";
+        width: 2em;
+        height: 2em;
+        position: absolute;
+        background: url(images/галочка2.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        left: -2em;
+        top: -0.5em;
+        z-index: -1;
+    }
+}
+.price_1 {
+    .button {
+        color: $prime-color;
+        background-color: $white-text;
+        border: 0.1em solid $prime-color;
+        transition: 0.5s ease;
+    }
+    .button:hover {
+        color: $white-text;
+        background-color: $prime-color;
+    }
+}
+.price_3 {
+    .button {
+        color: $prime-color;
+        background-color: $white-text;
+        border: 0.1em solid $prime-color;
+        transition: 0.5s ease;
+    }
+    .button:hover {
+        color: $white-text;
+        background-color: $prime-color;
+    }
+}
+.price_list_custom {
+    font-weight: bold;
+}
+.price_card_title {
+    font-weight: 600;
+}
+.price {
+    font-weight: 500;
+    font-size: 4em;
+    p {
+        font-size: 0.25em;
+        color: rgb(126, 126, 126);
+        text-align: center;
+    }
+}
+
+//faq
+.faq {
+    padding: 5em 0 3em 0;
+    display: flex;
+    gap: 1.8em;
+    flex-wrap: wrap;
+}
+.faq_dashboard {
+    margin-inline: auto;
+}
+.question_tabs {
+    display: flex;
+    flex-direction: column;
+    gap: -7.5em;
+    width: 100%;
+    max-width: 28em;
+    margin-inline: auto;
+}
+.questions {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+.tab_btn {
+    border-bottom: 0.1em solid rgba(163, 163, 163, 0.303);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.tab_btn.active {
+    border-bottom: 0.1em solid $prime-color;
+}
+.tabs_item {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease;
+    translate: 0 -50%;
+    display: none;
+}
+.tabs_item.active {
+    visibility: visible;
+    opacity: 1;
+    translate: 0 0;
+    display: block;
+}
