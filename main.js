@@ -24,48 +24,78 @@ sectionOneObserver.observe(sectionOne);
 
 // tabs
 
-const tabsbtn = document.querySelectorAll(".tab_btn");
-const tabsItems = document.querySelectorAll(".tabs_item");
+const accordion = document.getElementsByClassName('contentBx');
+for (let i = 0; i < accordion.length; i++) {
+    accordion[i].addEventListener('click', function () {
+        this.classList.toggle('active');
+    });
+};
 
-tabsbtn.forEach(function (item) {
-    item.addEventListener("click", function () {
-        let currentBtn = item;
-        let tabId = currentBtn.getAttribute('data-tab');
-        let currentTab = document.querySelector(tabId);
+//animations
 
-        tabsbtn.forEach(function (item) {
-            item.classList.remove('active');
-        });
-
-        tabsItems.forEach(function (item) {
-            item.classList.remove('active');
-        });
-
-        currentBtn.classList.add('active');
-        currentTab.classList.add('active');
+$(window).scroll(function () {
+    $('.mov').each(function () {
+        let imagePos = $(this).offset().top;
+        let topOfWindow = $(window).scrollTop();
+        if (imagePos < topOfWindow+250) {
+            $(this).addClass('animate__bounceInLeft');
+        }
     });
 });
-function offTab() {
-    tabsbtn.forEach(function (item) {
-        item.classList.remove('active');
+$(window).scroll(function () {
+    $('.movL').each(function () {
+        let imagePos = $(this).offset().top;
+        let topOfWindow = $(window).scrollTop();
+        if (imagePos < topOfWindow+250) {
+            $(this).addClass('animate__bounceInRight');
+        }
     });
+});
+// const observer = new IntersectionObserver((entries) => {
+//     entries.forEach((entry) => {
+//         console.log(entry)
+//         if (entry.isIntersecting) {
+//             entry.target.classList.add('show');
+//         }
+//         else {
+//             entry.target.classList.remove('show');
+//         }
+//     });
+// });
 
-    tabsItems.forEach(function (item) {
-        item.classList.remove('active');
-    });
-}
-// FAQ remove empty place on tab
-// function clearEmptyTab() {
+// const hiddenElements = document.querySelectorAll('.hidden');
+// hiddenElements.forEach((el) => observer.observe(el));
 
+
+
+
+// const tabsbtn = document.querySelectorAll(".tab_btn");
+// const tabsItems = document.querySelectorAll(".tabs_item");
+
+// tabsbtn.forEach(function (item) {
+//     item.addEventListener("click", function () {
+//         let currentBtn = item;
+//         let tabId = currentBtn.getAttribute('data-tab');
+//         let currentTab = document.querySelector(tabId);
+
+//         tabsbtn.forEach(function (item) {
+//             item.classList.remove('active');
+//         });
+
+//         tabsItems.forEach(function (item) {
+//             item.classList.remove('active');
+//         });
+
+//         currentBtn.classList.add('active');
+//         currentTab.classList.add('active');
+//     });
+// });
+// function offTab() {
+//     tabsbtn.forEach(function (item) {
+//         item.classList.remove('active');
+//     });
+
+//     tabsItems.forEach(function (item) {
+//         item.classList.remove('active');
+//     });
 // }
-
-
-        // if (currentBtn.classList.contains('active') & offTab(2)) {
-        //     tabsbtn.forEach(function (item) {
-        //         item.classList.remove('active');
-        //     });
-        
-        //     tabsItems.forEach(function (item) {
-        //         item.classList.remove('active');
-        //     });
-        // }

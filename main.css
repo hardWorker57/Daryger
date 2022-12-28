@@ -31,6 +31,23 @@ body {
   margin: auto;
 }
 
+input::-moz-placeholder {
+  color: #fff;
+}
+
+input:-ms-input-placeholder {
+  color: #fff;
+}
+
+input::placeholder {
+  color: #fff;
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
 @media screen and (max-width: 1320px) {
   .menu_list {
     display: none;
@@ -158,10 +175,6 @@ header {
   font-size: 1.8em;
 }
 
-.card_content {
-  text-align: center;
-}
-
 .custom_card_title {
   margin-top: 0;
 }
@@ -203,8 +216,50 @@ header {
 
 .about_card {
   display: flex;
+  align-items: center;
+  gap: 2em;
+  max-width: 30em;
+}
+
+.card_typo {
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.fas {
+  width: 3em;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fas::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  padding: 0.4em;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  color: #4dd7c4;
+  -webkit-font-smoothing: antialised;
+  font-size: 2.3em;
+  background-color: #f2f6fc;
+  border-radius: 100%;
+}
+
+.fab::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  color: #4dd7c4;
+  -webkit-font-smoothing: antialised;
+  font-size: 2em;
 }
 
 .about_3 {
@@ -354,28 +409,108 @@ header {
 .questions {
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
 }
 
-.tab_btn {
-  border-bottom: 0.1em solid rgba(163, 163, 163, 0.303);
+.contentBx {
   cursor: pointer;
   transition: 0.5s;
 }
 
-.tab_btn.active {
+.questions .contentBx .label {
+  cursor: pointer;
+  border-bottom: 0.1em solid rgba(163, 163, 163, 0.303);
+  padding: 1em 0;
+}
+
+.questions .contentBx.active .label {
   border-bottom: 0.1em solid #4dd7c4;
 }
 
-.tabs_item {
-  visibility: hidden;
-  transition: 0.5s ease;
-  translate: 0 -50%;
-  display: none;
+.questions .contentBx .content {
+  background: #fff;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  overflow-y: hidden;
 }
 
-.tabs_item.active {
-  visibility: visible;
-  translate: 0 0;
+.questions .contentBx.active .content {
+  height: 8em;
+  padding: 10px 0;
+}
+
+#clients_1 {
+  background-color: #4dd7c4;
+}
+
+.our_achievements {
+  padding: 0.3em 0;
+  color: #fff;
+}
+
+.clients_slider {
+  margin-top: 3em;
+  max-width: 98%;
+  margin-inline: auto;
+  padding-bottom: 7em;
+}
+
+.slider_items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5em;
+  overflow: hidden;
+}
+
+.slider_item {
+  border: 0.5em solid #fff;
+  border-radius: 0.3em;
+}
+
+.slider_item img {
+  width: 18.5em;
+  height: 26em;
   display: block;
+  -o-object-position: center;
+     object-position: center;
+}
+
+#clients_3 {
+  background-color: #4dd7c4;
+  padding: 6em 0;
+}
+
+.check_list {
+  height: 4em;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  border: 0.1em solid #ffffff;
+  border-radius: 0.3em;
+  max-width: 30em;
+  margin-inline: auto;
+  padding: 0;
+}
+
+.check_list_button {
+  text-transform: uppercase;
+  color: #4dd7c4;
+  background-color: #ffffff;
+  min-height: 4em;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+}
+
+.check_list_input {
+  background-color: inherit;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-inline: 1.5em;
 }/*# sourceMappingURL=main.css.map */

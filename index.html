@@ -9,7 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300;400&display=swap" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="images/icons8-земной-шар-48.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/babcead3a0.js" crossorigin="anonymous"></script>
     <title>Daryger</title>
+    
 </head>
 <body>
     <div class="wrapper">
@@ -17,26 +21,30 @@
         <!-- header -->
 
         <header>
+            <div class="animate__animated animate__bounceInDown">
             <div class="header_container">
-                <div class="header_logo"><img src="images/logo_update.png" alt="" height="58px" width="220px"></div>
-                <div class="header_content">
-                    <div class="menu">
-                        <a href="#home" class="menu_list">Главная</a>
-                        <a href="#about" class="menu_list">Платформа</a>
-                        <a href="#price" class="menu_list">Цены</a>
-                        <a href="#team" class="menu_list">Команда</a>
-                        <a href="#clients" class="menu_list">Клиенты</a>
-                        <a href="#tools" class="menu_list">Инструменты</a>
-                        <a href="#news" class="menu_list">Новости</a>
-                        <a href="#contact" class="menu_list">Контакты</a>
+                
+                    <div class="header_logo"><img src="images/logo_update.png" alt="" height="58px" width="220px"></div>
+                    <div class="header_content">
+                        <div class="menu">
+                            <a href="#home" class="menu_list">Главная</a>
+                            <a href="#about" class="menu_list">Платформа</a>
+                            <a href="#price" class="menu_list">Цены</a>
+                            <a href="#team" class="menu_list">Команда</a>
+                            <a href="#clients" class="menu_list">Клиенты</a>
+                            <a href="#tools" class="menu_list">Инструменты</a>
+                            <a href="#news" class="menu_list">Новости</a>
+                            <a href="#contact" class="menu_list">Контакты</a>
+                        </div>
                     </div>
+                    <div class="header_start"><a href="#" class="button">Начать</a></div>
                 </div>
-                <div class="header_start"><a href="#" class="button">Начать</a></div>
+            </div>
             </div>
         </header>
         <section id="home" class="home">
             <div class="container">
-                <div class="home_container">
+                <div class="home_container hidden">
                     <div class="home_title">Представляем Daryger, Платформу для цифровой трансформации</div>
                     <div class="home_content">Daryger спроектирован с учётом реалий рынка Кыргызстана и включает полный набор модулей для построения цифрового двойника клиники.</div>
                     <div class="button_wrap"><a href="#" class="button">Попробовать</a></div>
@@ -46,51 +54,62 @@
 
         <!-- about -->
 
-        <section id="about">
-            <div class="container">
-                <div class="block_title">Интегрированное решение для частных клиник</div>
-                <div class="block_content">Сокращает время на внутренние коммуникации.</div>
-                <div class="cards">
-                    <div class="card">
-                        <div class="card_image"><img src="images/main-service1.png" alt="" class="about_image"></div>
-                        <div class="card_title">Документы</div>
-                        <div class="card_content">Амбулаторный протокол от 30 секунд. История болезни от 10 минут. Эпикриз от 2 минут.</div>
-                        <div class="card_button"><a href="#" class="button">Daryger для врачей</a></div>
+        <section id="about" class="hidden">
+            <div class="animate__animated mov">
+                <div class="container">
+                    <div class="block_title">Интегрированное решение для частных клиник</div>
+                    <div class="block_content">Сокращает время на внутренние коммуникации.</div>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="card_image"><img src="images/main-service1.png" alt="" class="about_image"></div>
+                            <div class="card_title">Документы</div>
+                            <div class="card_content">Амбулаторный протокол от 30 секунд. История болезни от 10 минут. Эпикриз от 2 минут.</div>
+                            <div class="card_button"><a href="#" class="button">Daryger для врачей</a></div>
+                        </div>
+                        <div class="card">
+                            <div class="card_image"><img src="images/main-service2.png" alt="" class="about_image"></div>
+                            <div class="card_title">Финансы</div>
+                            <div class="card_content">Сократить расходы, привлечь пациентов, найти точки роста, увеличить выручку.</div>
+                            <div class="card_button"><a href="#" class="button">Daryger для продаж</a></div>
+                        </div>
+                        <div class="card">
+                            <div class="card_image"><img src="images/main-service3.png" alt="" class="about_image"></div>
+                            <div class="card_title">Пациенты</div>
+                            <div class="card_content">Панель состояния пациента. Контроль приёма назначений. Контроль пациента вне клиники.</div>
+                            <div class="card_button"><a href="#" class="button">Daryger для пациента</a></div>
+                        </div>
                     </div>
-                    <div class="card">
-                        <div class="card_image"><img src="images/main-service2.png" alt="" class="about_image"></div>
-                        <div class="card_title">Финансы</div>
-                        <div class="card_content">Сократить расходы, привлечь пациентов, найти точки роста, увеличить выручку.</div>
-                        <div class="card_button"><a href="#" class="button">Daryger для продаж</a></div>
-                    </div>
-                    <div class="card">
-                        <div class="card_image"><img src="images/main-service3.png" alt="" class="about_image"></div>
-                        <div class="card_title">Пациенты</div>
-                        <div class="card_content">Панель состояния пациента. Контроль приёма назначений. Контроль пациента вне клиники.</div>
-                        <div class="card_button"><a href="#" class="button">Daryger для пациента</a></div>
-                    </div>
-                </div>
-            </div> <br>
+                </div> <br>
+                
+            </div>
             <div class="container">
                 <div class="about_2">
                     <div class="about_block about_block_2">
                         <div class="about_card">
-                            <div class="about_card_image"></div>
-                            <div class="card_title">С рукой на пульсе.</div>
-                            <div class="card_content">Пробуй новые методики и меняй процессы внутри клиники.</div>
+                            <div class="fas fa-chart-line"></div>
+                            <div class="card_typo">
+                                <div class="card_title">С рукой на пульсе.</div>
+                                <div class="card_content">Пробуй новые методики и меняй процессы внутри клиники.</div>
+                            </div>
                         </div>
                         <div class="about_card">
-                            <div class="about_card_image"></div>
-                            <div class="card_title">Лёгкий вход, быстрый результат.</div>
-                            <div class="card_content">Зарегистрируй первого пациента всего за минуту. Или вернём деньги.</div>
+                            <div class="fas fa-network-wired"></div>
+                            <div class="card_typo">
+                                <div class="card_title">Лёгкий вход, быстрый результат.</div>
+                                <div class="card_content">Зарегистрируй первого пациента всего за минуту. Или вернём деньги.</div>
+                            </div>
                         </div>
                         <div class="about_card">
-                            <div class="about_card_image"></div>
-                            <div class="card_title">Мгновенный результат.</div>
-                            <div class="card_content">Получи статистику в первый день использования, используй её сразу же.</div>
+                            <div class="fas fa-rocket"></div>
+                            <div class="card_typo">
+                                <div class="card_title">Мгновенный результат.</div>
+                                <div class="card_content">Получи статистику в первый день использования, используй её сразу же.</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="about_dashboard"><img src="images/img0.png" alt="dashboard" max-height="360em" width="500em" class="cut_image responsive_img"></div>
+                    <div class="animate__animated movL">
+                        <div class="about_dashboard"><img src="images/img0.png" alt="dashboard" max-height="360em" width="500em" class="cut_image responsive_img"></div>
+                    </div>
                 </div>
             </div>
             <div class="container">
@@ -109,7 +128,7 @@
 
         <!-- price -->
 
-        <section id="price">
+        <section id="price" class="hidden">
             <div class="container">
                 <div class="block_title">Тарифы для клиник от 2 до 200 сотрудников</div>
                 <div class="block_content">Вернём деньги, если за 30 дней не произойдет улучшений.</div>
@@ -162,29 +181,84 @@
                     <div class="question_tabs">
                         <div class="card_title">Блиц-вопросы</div>
                         <div class="questions">
-                            <div class="tab_btn" ondblclick="offTab()" data-tab="#tab_1">Email and user settings</div>
-                            <div class="tabs_content">
-                                <div class="tabs_item" id="tab_1">Nemo enim ipsam voluptatem quia voluptas sit aspernatur netsum loris fugit, sed quia magni dolores eos qui ratione sequi nesciunt, neque et quis autem velis reprehenderit ets quis velit.</div>
+                            <div class="contentBx">
+                                <div class="label">Email and user settings</div>
+                                <div class="content">
+                                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur netsum loris fugit, sed quia magni dolores eos qui ratione sequi nesciunt, neque et quis autem velis reprehenderit ets quis velit.</p>
+                                </div>
                             </div>
-                            <div class="tab_btn" ondblclick="offTab()" data-tab="#tab_2">Import new billing system data</div>
-                            <div class="tabs_content">
-                                <div class="tabs_item" id="tab_2">Nemo enim ipsam voluptatem quia voluptas sit aspernatur netsum loris fugit, sed quia magni dolores eos qui ratione sequi nesciunt, neque et quis autem velis reprehenderit ets quis velit.</div>
+                            <div class="contentBx">
+                                <div class="label">Import new billing system data</div>
+                                <div class="content">
+                                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur netsum loris fugit, sed quia magni dolores eos qui ratione sequi nesciunt, neque et quis autem velis reprehenderit ets quis velit.</p>
+                                </div>
                             </div>
-                            <div class="tab_btn" ondblclick="offTab()" data-tab="#tab_3">Working with integrated apps</div>
-                            <div class="tabs_content">
-                                <div class="tabs_item" id="tab_3">Nemo enim ipsam voluptatem quia voluptas sit aspernatur netsum loris fugit, sed quia magni dolores eos qui ratione sequi nesciunt, neque et quis autem velis reprehenderit ets quis velit.</div>
+                            <div class="contentBx">
+                                <div class="label">Working with integrated apps</div>
+                                <div class="content">
+                                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur netsum loris fugit, sed quia magni dolores eos qui ratione sequi nesciunt, neque et quis autem velis reprehenderit ets quis velit.</p>
+                                </div>
                             </div>
-                            <div class="tab_btn" ondblclick="offTab()" data-tab="#tab_4">Two-factor authentication</div>
-                            <div class="tabs_content">
-                                <div class="tabs_item" id="tab_4">Nemo enim ipsam voluptatem quia voluptas sit aspernatur netsum loris fugit, sed quia magni dolores eos qui ratione sequi nesciunt, neque et quis autem velis reprehenderit ets quis velit.</div>
+                            <div class="contentBx">
+                                <div class="label">Two-factor authentication</div>
+                                <div class="content">
+                                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur netsum loris fugit, sed quia magni dolores eos qui ratione sequi nesciunt, neque et quis autem velis reprehenderit ets quis velit.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="clients"></section>
-        <section id="tools"></section>
+
+        <!-- clients  -->
+
+        <section id="clients" class="animate__animated mov">
+            <div id="clients_1">
+                <div class="our_achievements">
+                    <div class="block_title">Наши достижения</div>
+                    <div class="block_content">There are many variations of passages of Lorem Ipsum available, but the majority<br>have suffered alteration, by injected humour, or new randomised words.</div>
+                </div>
+                <div class="clients_slider">
+                    <div class="slider_items">
+                        <div class="slider_item"><img src="images/showcase1.jpg" alt=""></div>
+                        <div class="slider_item"><img src="images/showcase2.jpg" alt=""></div>
+                        <div class="slider_item"><img src="images/showcase3.jpg" alt=""></div>
+                        <div class="slider_item"><img src="images/showcase4.jpg" alt=""></div>
+                        <div class="slider_item"><img src="images/showcase5.jpg" alt=""></div>
+                        <div class="slider_item"><img src="images/showcase6.jpg" alt=""></div>
+                        <div class="slider_item"><img src="images/showcase7.jpg" alt=""></div>
+                        <div class="slider_item"><img src="images/showcase8.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div id="clients_2"></div>
+            <div id="clients_3">
+                <div class="container">
+                    <div class="block_title">Хочешь так же?</div>
+                    <div class="block_content">Оставь email и получи чеклист эффективности клиники.</div>
+                    <br>
+                    <div class="check_list">
+                        <div class="check_list_email"><input type="email" name="email" id="" placeholder="Email" class="check_list_input"></div>
+                        <div class="check_list_button"><a href="">Хочу чеклист</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- tools  -->
+
+        <section id="tools">
+            <div class="block_title"></div>
+            <div class="block_content"></div>
+            <br><br><br><br><br><br>
+            <div class="fas fa-tachometer-alt"></div>
+            <div class="fas fa-chart-line"></div>
+            <div class="fas fa-bell"></div>
+            <div class="fas fa-hand-holding-usd"></div>
+            <div class="fas fa-rocket"></div>
+            <div class="fab fa-rocketchat"></div>
+        </section>
         <section id="contact"></section>
         <footer id="footer"></footer>
     </div>
