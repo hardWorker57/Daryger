@@ -37,7 +37,7 @@ $(window).scroll(function () {
     $('.mov').each(function () {
         let imagePos = $(this).offset().top;
         let topOfWindow = $(window).scrollTop();
-        if (imagePos < topOfWindow+500) {
+        if (imagePos < topOfWindow+600) {
             $(this).addClass('animate__bounceInLeft');
             $(this).removeClass('mov');
         }
@@ -47,7 +47,7 @@ $(window).scroll(function () {
     $('.movL').each(function () {
         let imagePos = $(this).offset().top;
         let topOfWindow = $(window).scrollTop();
-        if (imagePos < topOfWindow+500) {
+        if (imagePos < topOfWindow+600) {
             $(this).addClass('animate__bounceInRight');
             $(this).removeClass('movL');
         }
@@ -57,7 +57,7 @@ $(window).scroll(function () {
     $('.mov_card').each(function () {
         let imagePos = $(this).offset().top;
         let topOfWindow = $(window).scrollTop();
-        if (imagePos < topOfWindow+500) {
+        if (imagePos < topOfWindow+600) {
             $(this).addClass('animate__zoomIn');
             $(this).removeClass('mov_card');
         }
@@ -67,7 +67,7 @@ $(window).scroll(function () {
     $('.mov_light').each(function () {
         let imagePos = $(this).offset().top;
         let topOfWindow = $(window).scrollTop();
-        if (imagePos < topOfWindow+500) {
+        if (imagePos < topOfWindow+600) {
             $(this).addClass('animate__zoomInDown');
             $(this).removeClass('mov_light');
         }
