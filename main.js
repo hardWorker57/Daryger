@@ -39,6 +39,7 @@ $(window).scroll(function () {
         let topOfWindow = $(window).scrollTop();
         if (imagePos < topOfWindow+250) {
             $(this).addClass('animate__bounceInLeft');
+            $(this).removeClass('mov');
         }
     });
 });
@@ -48,54 +49,28 @@ $(window).scroll(function () {
         let topOfWindow = $(window).scrollTop();
         if (imagePos < topOfWindow+250) {
             $(this).addClass('animate__bounceInRight');
+            $(this).removeClass('movL');
         }
     });
 });
-// const observer = new IntersectionObserver((entries) => {
-//     entries.forEach((entry) => {
-//         console.log(entry)
-//         if (entry.isIntersecting) {
-//             entry.target.classList.add('show');
-//         }
-//         else {
-//             entry.target.classList.remove('show');
-//         }
-//     });
-// });
+$(window).scroll(function () {
+    $('.mov_card').each(function () {
+        let imagePos = $(this).offset().top;
+        let topOfWindow = $(window).scrollTop();
+        if (imagePos < topOfWindow+250) {
+            $(this).addClass('animate__zoomIn');
+            $(this).removeClass('mov_card');
+        }
+    });
+});
+$(window).scroll(function () {
+    $('.mov_light').each(function () {
+        let imagePos = $(this).offset().top;
+        let topOfWindow = $(window).scrollTop();
+        if (imagePos < topOfWindow+250) {
+            $(this).addClass('animate__zoomInDown');
+            $(this).removeClass('mov_light');
+        }
+    });
+});
 
-// const hiddenElements = document.querySelectorAll('.hidden');
-// hiddenElements.forEach((el) => observer.observe(el));
-
-
-
-
-// const tabsbtn = document.querySelectorAll(".tab_btn");
-// const tabsItems = document.querySelectorAll(".tabs_item");
-
-// tabsbtn.forEach(function (item) {
-//     item.addEventListener("click", function () {
-//         let currentBtn = item;
-//         let tabId = currentBtn.getAttribute('data-tab');
-//         let currentTab = document.querySelector(tabId);
-
-//         tabsbtn.forEach(function (item) {
-//             item.classList.remove('active');
-//         });
-
-//         tabsItems.forEach(function (item) {
-//             item.classList.remove('active');
-//         });
-
-//         currentBtn.classList.add('active');
-//         currentTab.classList.add('active');
-//     });
-// });
-// function offTab() {
-//     tabsbtn.forEach(function (item) {
-//         item.classList.remove('active');
-//     });
-
-//     tabsItems.forEach(function (item) {
-//         item.classList.remove('active');
-//     });
-// }

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/babcead3a0.js" crossorigin="anonymous"></script>
+    <script src="slider.js" defer></script>
     <title>Daryger</title>
     
 </head>
@@ -107,8 +108,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="animate__animated movL">
-                        <div class="about_dashboard"><img src="images/img0.png" alt="dashboard" max-height="360em" width="500em" class="cut_image responsive_img"></div>
+                    <div class="about_dashboard_wrap">
+                        <div class="animate__animated movL">
+                            <div class="about_dashboard"><img src="images/img0.png" alt="dashboard" max-height="360em" width="500em" class="cut_image responsive_img"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -134,50 +137,66 @@
                 <div class="block_content">Вернём деньги, если за 30 дней не произойдет улучшений.</div>
 
                 <div class="price_cards">
-                    <div class="price_card price_1">
-                        <div class="price_card_title">Я ТОЛЬКО СПРОСИТЬ</div>
-                        <div class="price">4500с <p>в месяц</p></div>
-                        <div class="price_include">
-                            <ul class="price_list">
-                                <li>Электронная регистратура</li>
-                                <li>База пациентов</li>
-                                <li>Настраиваемые дашборды</li>
-                                <li>Система лояльности</li>
-                            </ul>
+                    <div class="card_wrap">
+                        <div class="animate__animated mov_card">
+                            <div class="price_card price_1">
+                                <div class="price_card_title">Я ТОЛЬКО СПРОСИТЬ</div>
+                                <div class="price">4500с <p>в месяц</p></div>
+                                <div class="price_include">
+                                    <ul class="price_list">
+                                        <li>Электронная регистратура</li>
+                                        <li>База пациентов</li>
+                                        <li>Настраиваемые дашборды</li>
+                                        <li>Система лояльности</li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="button">Попробовать</a>
+                            </div>
                         </div>
-                        <a href="#" class="button">Попробовать</a>
                     </div>
-                    <div class="price_card price_2">
-                        <div class="price_card_title">С - СТАБИЛЬНОСТЬ</div>
-                        <div class="price">8500с <p>в месяц</p></div>
-                        <div class="price_include">
-                            <ul class="price_list">
-                                <li class="price_list_custom">Все фукнции слева</li>
-                                <li>Кабинет врача</li>
-                                <li>Электронная мед карта</li>
-                                <li>Настраиваемая рассылка</li>
-                            </ul>
+                    <div class="card_wrap">
+                        <div class="animate__animated mov_card">
+                            <div class="price_card price_2">
+                                <div class="price_card_title">С - СТАБИЛЬНОСТЬ</div>
+                                <div class="price">8500с <p>в месяц</p></div>
+                                <div class="price_include">
+                                    <ul class="price_list">
+                                        <li class="price_list_custom">Все фукнции слева</li>
+                                        <li>Кабинет врача</li>
+                                        <li>Электронная мед карта</li>
+                                        <li>Настраиваемая рассылка</li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="button">Попробовать</a>
+                            </div>
                         </div>
-                        <a href="#" class="button">Попробовать</a>
                     </div>
-                    <div class="price_card price_3">
-                        <div class="price_card_title">ВСЁ ПО ВЗРОСЛОМУ</div>
-                        <div class="price">10000с <p>в месяц</p></div>
-                        <div class="price_include">
-                            <ul class="price_list">
-                                <li class="price_list_custom">Все фукнции слева</li>
-                                <li>Чатботы</li>
-                                <li>Встроенная CRM</li>
-                                <li>Приоритетная поддержка</li>
-                            </ul>
+                    <div class="card_wrap">
+                        <div class="animate__animated mov_card">
+                            <div class="price_card price_3">
+                                <div class="price_card_title">ВСЁ ПО ВЗРОСЛОМУ</div>
+                                <div class="price">10000с <p>в месяц</p></div>
+                                <div class="price_include">
+                                    <ul class="price_list">
+                                        <li class="price_list_custom">Все фукнции слева</li>
+                                        <li>Чатботы</li>
+                                        <li>Встроенная CRM</li>
+                                        <li>Приоритетная поддержка</li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="button">Попробовать</a>
+                            </div>
                         </div>
-                        <a href="#" class="button">Попробовать</a>
                     </div>
                 </div>
             </div>
             <div class="container">
                 <div class="faq">
-                    <div class="faq_dashboard"><img src="images/img4.jpg" alt="" max-height="360em" width="500em" class="cut_image responsive_img"></div>
+                    <div class="about_dashboard_wrap">
+                        <div class="animate__animated mov_light">
+                            <div class="faq_dashboard"><img src="images/img4.jpg" alt="" max-height="360em" width="500em" class="cut_image responsive_img"></div>
+                        </div>
+                    </div>
                     <div class="question_tabs">
                         <div class="card_title">Блиц-вопросы</div>
                         <div class="questions">
@@ -220,26 +239,33 @@
                     <div class="block_content">There are many variations of passages of Lorem Ipsum available, but the majority<br>have suffered alteration, by injected humour, or new randomised words.</div>
                 </div>
                 <div class="clients_slider">
-                    <div class="slider_items">
-                        <div class="slider_item"><img src="images/showcase1.jpg" alt=""></div>
-                        <div class="slider_item"><img src="images/showcase2.jpg" alt=""></div>
-                        <div class="slider_item"><img src="images/showcase3.jpg" alt=""></div>
-                        <div class="slider_item"><img src="images/showcase4.jpg" alt=""></div>
-                        <div class="slider_item"><img src="images/showcase5.jpg" alt=""></div>
-                        <div class="slider_item"><img src="images/showcase6.jpg" alt=""></div>
-                        <div class="slider_item"><img src="images/showcase7.jpg" alt=""></div>
-                        <div class="slider_item"><img src="images/showcase8.jpg" alt=""></div>
+                    <div class="carousel" data-carousel>
+                        <div class="slides" data-slides>
+                            <button class="carousel_btn prev" data-carousel-button="prev">&#8249;</button>
+                            <button class="carousel_btn next" data-carousel-button="next">&#8250;</button>
+                            <ul class="slide" data-active>
+                                <li class="slide_item"><img src="images/showcase1.jpg" alt="slide #1"></li>
+                                <li class="slide_item"><img src="images/showcase2.jpg" alt="slide #2"></li>
+                                <li class="slide_item"><img src="images/showcase3.jpg" alt="slide #3"></li>
+                                <li class="slide_item"><img src="images/showcase4.jpg" alt="slide #4"></li>
+                            </ul>
+                            <ul class="slide">
+                                <li class="slide_item"><img src="images/showcase5.jpg" alt="slide #5"></li>
+                                <li class="slide_item"><img src="images/showcase6.jpg" alt="slide #6"></li>
+                                <li class="slide_item"><img src="images/showcase7.jpg" alt="slide #7"></li>
+                                <li class="slide_item"><img src="images/showcase8.jpg" alt="slide #8"></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
             <div id="clients_2"></div>
             <div id="clients_3">
                 <div class="container">
-                    <div class="block_title">Хочешь так же?</div>
-                    <div class="block_content">Оставь email и получи чеклист эффективности клиники.</div>
+                    <div class="block_title check_list_title">Хочешь так же? <br>Оставь email и получи чеклист эффективности клиники.</div>
                     <br>
                     <div class="check_list">
-                        <div class="check_list_email"><input type="email" name="email" id="" placeholder="Email" class="check_list_input"></div>
+                        <input type="email" name="email" id="" placeholder="Email" class="check_list_input">
                         <div class="check_list_button"><a href="">Хочу чеклист</a></div>
                     </div>
                 </div>
@@ -249,15 +275,46 @@
         <!-- tools  -->
 
         <section id="tools">
-            <div class="block_title"></div>
-            <div class="block_content"></div>
-            <br><br><br><br><br><br>
-            <div class="fas fa-tachometer-alt"></div>
-            <div class="fas fa-chart-line"></div>
-            <div class="fas fa-bell"></div>
-            <div class="fas fa-hand-holding-usd"></div>
-            <div class="fas fa-rocket"></div>
-            <div class="fab fa-rocketchat"></div>
+            <div class="block_title">Инструменты</div>
+            <div class="block_content">There are many variations of passages of Lorem Ipsum available, but the majority<br>have suffered alteration, by injected humour, or new randomised words.</div>
+            <br><br>
+            <div class="container">
+                <div class="tool_cards_1">
+                    <div class="tool_card">
+                        <div class="fas fa-tachometer-alt"></div>
+                        <div class="tool_card_title">Панели управления</div>
+                        <div class="card_content">Utise wisi enim minim veniam, quis et stationes ullamcorper suscipit ets lobotis nisle consequat nihis etim.</div>
+                    </div>
+                    <div class="tool_card">
+                        <div class="fas fa-chart-line"></div>
+                        <div class="tool_card_title">Лёгкий интерфейс</div>
+                        <div class="card_content">Utise wisi enim minim veniam, quis et stationes ullamcorper suscipit ets lobotis nisle consequat nihis etim.</div>
+                    </div>
+                    <div class="tool_card">
+                        <div class="fas fa-bell"></div>
+                        <div class="tool_card_title">Умные оповещения</div>
+                        <div class="card_content">Utise wisi enim minim veniam, quis et stationes ullamcorper suscipit ets lobotis nisle consequat nihis etim.</div>
+                    </div>
+                </div>
+                <br><br><br>
+                <div class="tool_cards_2">
+                    <div class="tool_card">
+                        <div class="fas fa-hand-holding-usd"></div>
+                        <div class="tool_card_title">Контроль стоимости</div>
+                        <div class="card_content">Utise wisi enim minim veniam, quis et stationes ullamcorper suscipit ets lobotis nisle consequat nihis etim.</div>
+                    </div>
+                    <div class="tool_card">
+                        <div class="fas fa-rocket"></div>
+                        <div class="tool_card_title">Уникальные возможности</div>
+                        <div class="card_content">Utise wisi enim minim veniam, quis et stationes ullamcorper suscipit ets lobotis nisle consequat nihis etim.</div>
+                    </div>
+                    <div class="tool_card">
+                        <div class="fab">&#xf3e8;</div>
+                        <div class="tool_card_title">Поддержка по любым вопросам</div>
+                        <div class="card_content">Utise wisi enim minim veniam, quis et stationes ullamcorper suscipit ets lobotis nisle consequat nihis etim.</div>
+                    </div>
+                </div>    
+            </div>
         </section>
         <section id="contact"></section>
         <footer id="footer"></footer>

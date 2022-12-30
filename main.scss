@@ -10,6 +10,9 @@ $dark-text: #000;
 html {
     scroll-behavior: smooth;
 }
+*::before, *::after {
+    box-sizing: border-box;
+}
 * {
     margin: 0;
     a {
@@ -36,21 +39,18 @@ body {
 input::placeholder {
     color: #fff;
 }
-// .hidden {
-//     opacity: 0;
-//     filter: blur(5px);
-//     transform: translateX(-100%);
-//     transition: all 1s;
-// }
-// .show {
-//     opacity: 1;
-//     filter: blur(0);
-//     transform: translateX(0);
-// }
-@media(prefers-reduced-motion) {
-    .hidden {
-        transition: none;
-    }
+.block_title {
+    font-weight: bold;
+    font-size: 1.6em;
+    margin-top: 2.5em;
+    padding: 0.4em;
+}
+.block_content,
+.block_title {
+    text-align: center;
+}
+.mov, .movL, .mov_card, .mov_light {
+    visibility: hidden;
 }
 
 //media 
@@ -137,16 +137,6 @@ header {
     color: $dark-text;
     min-height: 35em;
 }
-.block_title {
-    font-weight: bold;
-    font-size: 2.2em;
-    margin-top: 2.5em;
-    padding: 0.4em;
-}
-.block_content,
-.block_title {
-    text-align: center;
-}
 .about_image {
     height: 12em;
     width: 14em;
@@ -189,7 +179,8 @@ header {
     gap: 2.5em;
     margin-inline: auto;
 }
-.about_dashboard {
+.about_dashboard_wrap, 
+.card_wrap {
     margin-inline: auto;
 }
 .cut_image {
@@ -234,6 +225,15 @@ header {
     font-size: 2.3em;
     background-color: #f2f6fc;
     border-radius: 100%;
+}
+.fab {
+    font-weight: 900;
+    font-size: 2em;
+    color: $prime-color;
+    background-color: #f2f6fc;
+    border-radius: 100%;
+    padding: 0.4em;
+    margin: 0;
 }
 .fab::before {
     font-family: "Font Awesome 5 Free";
@@ -422,22 +422,65 @@ header {
     margin-inline: auto;
     padding-bottom: 7em;
 }
-.slider_items {
+.carousel {
+    position: relative;
+    min-height: 24em;
+}
+.slide {
+    position: absolute;
     display: flex;
+    inset: 0;
+    opacity: 0;
     align-items: center;
     justify-content: space-between;
-    gap: 1.5em;
-    overflow: hidden;
+    // margin-inline: auto;
+    // gap: 1.5em;
 }
-.slider_item {
-    border: 0.5em solid $white-text;
-    border-radius: 0.3em;
+.carousel ul{
+    border: 2px solid red;
 }
-.slider_item img {
-    width: 18.5em;
-    height: 26em;
+
+.carousel_btn {
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    color: #ffffff88;
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(0, 0, 0, .1);
+}
+.carousel_btn:hover, 
+.carousel_btn:focus {
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, .2);
+}
+.carousel_btn:focus {
+    outline: 1px solid black;
+}
+.carousel_btn.prev {
+    left: 7rem;
+}
+.carousel_btn.next {
+    right: 7rem;
+}
+
+.slide[data-active] {
+    opacity: 1;
+}
+.slide_item {
+    border: 0.3em solid white;
+    border-radius: 0.4em;
+}
+.slide_item > img {
     display: block;
-    object-position: center;
+    max-width: 100%;
+    max-height: 26em;
+    object-fit: contain;
 }
 
 //clients_3
@@ -451,18 +494,19 @@ header {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    border: 0.1em solid #ffffff;
-    border-radius: 0.3em;
     max-width: 30em;
     margin-inline: auto;
     padding: 0;
 }
 .check_list_button {
+    font-size: 0.8em;
     text-transform: uppercase;
     color: $prime-color;
     background-color: #ffffff;
-    min-height: 4em;
+    min-height: 5em;
     width: 35%;
+    padding-inline: 0.8em;
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -476,4 +520,36 @@ header {
     border: none;
     outline: none;
     padding-inline: 1.5em;
+    border: 2px solid #ffffff;
+    border-top-left-radius: 0.3em;
+    border-bottom-left-radius: 0.3em;
+}
+
+//tools 
+#tools {
+    color: #000;
+}
+
+.tool_cards_1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+}
+.tool_cards_2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    gap: 1em;
+}
+.tool_card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+.tool_card_title {
+    font-size: 1.2em;
+    font-weight: 600;
 }
