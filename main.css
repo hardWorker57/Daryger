@@ -63,6 +63,10 @@ input::placeholder {
   visibility: hidden;
 }
 
+hr {
+  border: 0.1px solid rgba(224, 224, 224, 0.384);
+}
+
 @media screen and (max-width: 1320px) {
   .menu_list {
     display: none;
@@ -118,6 +122,7 @@ header {
   padding: 0.8rem 2rem;
   border-radius: 0.8em;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -231,14 +236,6 @@ header {
   align-items: flex-start;
 }
 
-.fas {
-  width: 3em;
-  height: 3em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .fas::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -254,14 +251,16 @@ header {
   border-radius: 100%;
 }
 
+.custom_icon {
+  font-weight: 900;
+  font-size: 2.5em;
+  color: #4dd7c4;
+}
+
 .fab {
   font-weight: 900;
-  font-size: 2em;
+  font-size: 2.5em;
   color: #4dd7c4;
-  background-color: #f2f6fc;
-  border-radius: 100%;
-  padding: 0.4em;
-  margin: 0;
 }
 
 .fab::before {
@@ -499,17 +498,11 @@ header {
   cursor: pointer;
   border-radius: 0.25rem;
   padding: 0 0.5rem;
-  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .carousel_btn:hover,
 .carousel_btn:focus {
   color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.carousel_btn:focus {
-  outline: 1px solid black;
 }
 
 .carousel_btn.prev {
@@ -558,7 +551,7 @@ header {
   color: #4dd7c4;
   background-color: #ffffff;
   min-height: 5em;
-  width: 35%;
+  width: 14em;
   padding-inline: 0.8em;
   text-align: center;
   display: flex;
@@ -566,18 +559,22 @@ header {
   justify-content: center;
   border-top-right-radius: 0.3em;
   border-bottom-right-radius: 0.3em;
+  margin-inline: auto;
 }
 
 .check_list_input {
   background-color: inherit;
   height: 100%;
   width: 100%;
+  max-width: 30em;
   border: none;
   outline: none;
   padding-inline: 1.5em;
   border: 2px solid #ffffff;
   border-top-left-radius: 0.3em;
   border-bottom-left-radius: 0.3em;
+  margin-inline: auto;
+  font-size: 1em;
 }
 
 #tools {
@@ -588,14 +585,16 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1em;
+  gap: 2em;
+  flex-wrap: wrap;
 }
 
 .tool_cards_2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1em;
+  gap: 2em;
+  flex-wrap: wrap;
 }
 
 .tool_card {
@@ -604,9 +603,121 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 1em;
+  max-width: 20em;
 }
 
 .tool_card_title {
+  color: #183c68;
   font-size: 1.2em;
   font-weight: 600;
+}
+
+.tool_card_content {
+  text-align: center;
+}
+
+.tools_2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10em;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.tool_block {
+  max-width: 30em;
+  margin-inline: auto;
+}
+
+.tool_title {
+  font-size: 1.5em;
+}
+
+.tool_block {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.tool_block .button {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+.tool_content .price_list {
+  margin: 2rem 0 0 1.8rem;
+}
+
+#contact {
+  color: #000;
+  margin: 4em 0 4em 0;
+}
+
+.contact_block {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.contact_us {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: flex-start;
+}
+.contact_us .button {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+.contact_us > p > .fas {
+  color: #4dd7c4;
+}
+
+.contact_2 {
+  margin-top: 8em;
+}
+
+#footer {
+  background-color: #4dd7c4;
+  padding: 4em 0 4em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.footer_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 15em;
+  gap: 1.5em;
+  margin-inline: auto;
+}
+.footer_content p {
+  text-align: center;
+}
+
+.footer_social {
+  width: 10em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_social a {
+  transition: 0.5s;
+}
+
+.footer_social a:hover {
+  opacity: 0.4;
+}
+
+.footer_social i {
+  font-size: 1.5em;
+}
+
+section {
+  overflow: hidden;
 }/*# sourceMappingURL=main.css.map */

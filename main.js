@@ -22,7 +22,7 @@ sectionOneOptions);
 
 sectionOneObserver.observe(sectionOne);
 
-// tabs
+// accordion
 
 const accordion = document.getElementsByClassName('contentBx');
 for (let i = 0; i < accordion.length; i++) {
