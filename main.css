@@ -35,16 +35,23 @@ body {
   margin: auto;
 }
 
+input,
+textarea {
+  outline: none;
+  border: 1px solid #ccc;
+  padding: 0.8em;
+}
+
 input::-moz-placeholder {
-  color: #fff;
+  color: inherit;
 }
 
 input:-ms-input-placeholder {
-  color: #fff;
+  color: inherit;
 }
 
 input::placeholder {
-  color: #fff;
+  color: inherit;
 }
 
 .block_title {
@@ -75,6 +82,12 @@ hr {
 @media screen and (max-width: 768px) {
   body {
     font-size: 14px;
+  }
+  .about_block_3 {
+    border-bottom-left-radius: 0.8em;
+    border-bottom-right-radius: 0.8em;
+    border-top-right-radius: none;
+    border-top-left-radius: none;
   }
 }
 header {
@@ -131,7 +144,7 @@ header {
 
 #home {
   background-color: rgb(197, 193, 193);
-  min-height: 36.7em;
+  min-height: 660px;
   min-width: 100%;
   border-bottom-left-radius: 4em;
   border-bottom-right-radius: 4em;
@@ -275,14 +288,16 @@ header {
   font-size: 2em;
 }
 
+.fa-network-wired {
+  max-width: 4em;
+}
+
 .about_3 {
   margin-top: 5em;
   display: flex;
-  gap: 2em;
-  background-color: #f2f6fc;
-  border-radius: 0.8em;
   align-items: center;
   flex-wrap: wrap;
+  margin-inline: auto;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
@@ -292,11 +307,18 @@ header {
   margin-inline: auto;
 }
 
+.about_video img {
+  display: block;
+}
+
 .about_block_3 {
-  padding: 1em 1em 1em 0;
-  gap: 1.5em;
+  padding: 2.2em;
+  gap: 2em;
+  background-color: #f2f6fc;
   max-width: 30em;
   margin-inline: auto;
+  border-top-right-radius: 0.8em;
+  border-bottom-right-radius: 0.8em;
 }
 
 .about_wrap {
@@ -577,19 +599,23 @@ header {
   font-size: 1em;
 }
 
+.check_list_input::-moz-placeholder {
+  color: #ffffff;
+}
+
+.check_list_input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.check_list_input::placeholder {
+  color: #ffffff;
+}
+
 #tools {
   color: #000;
 }
 
-.tool_cards_1 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2em;
-  flex-wrap: wrap;
-}
-
-.tool_cards_2 {
+.tool_cards {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -604,6 +630,7 @@ header {
   align-items: center;
   gap: 1em;
   max-width: 20em;
+  margin-inline: auto;
 }
 
 .tool_card_title {
@@ -658,18 +685,31 @@ header {
   display: flex;
   justify-content: space-between;
   gap: 2em;
+  flex-wrap: wrap;
 }
 
 .contact_us {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 2em;
   align-items: flex-start;
+  margin-inline: auto;
+  width: 48%;
 }
 .contact_us .button {
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
+}
+
+textarea {
+  color: #ccc;
+}
+
+.contact_input {
+  color: #ccc;
+  border-radius: 4px;
+  width: 100%;
 }
 
 .contact_us > p > .fas {
