@@ -24,17 +24,24 @@
         <header>
             <div class="animate__animated animate__bounceInDown">
             <div class="header_container">
-                    <div class="header_logo"><img src="images/logo_update.png" alt="" height="58px" width="220px"></div>
+                    <div class="header_logo"><img src="images/logo_update.png" alt="" height="58px" width="220px" class="logo"></div>
                     <div class="header_content">
-                        <div class="menu">
-                            <a href="#home" class="menu_list">Главная</a>
-                            <a href="#about" class="menu_list">Платформа</a>
-                            <a href="#price" class="menu_list">Цены</a>
-                            <a href="#team" class="menu_list">Команда</a>
-                            <a href="#clients" class="menu_list">Клиенты</a>
-                            <a href="#tools" class="menu_list">Инструменты</a>
-                            <a href="#news" class="menu_list">Новости</a>
-                            <a href="#contact" class="menu_list">Контакты</a>
+                        <div class="burger_menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="menu__body">
+                            <div class="menu">
+                                <a href="#home" class="menu_list">Главная</a>
+                                <a href="#about" class="menu_list">Платформа</a>
+                                <a href="#price" class="menu_list">Цены</a>
+                                <a href="#team" class="menu_list">Команда</a>
+                                <a href="#clients" class="menu_list">Клиенты</a>
+                                <a href="#tools" class="menu_list">Инструменты</a>
+                                <a href="#news" class="menu_list">Новости</a>
+                                <a href="#contact" class="menu_list">Контакты</a>
+                            </div>
                         </div>
                     </div>
                     <div class="header_start"><a href="#" class="button">Начать</a></div>
@@ -240,19 +247,23 @@
                 <div class="clients_slider">
                     <div class="carousel" data-carousel>
                         <div class="slides" data-slides>
-                            <button class="carousel_btn prev" data-carousel-button="prev">&#8249;</button>
-                            <button class="carousel_btn next" data-carousel-button="next">&#8250;</button>
-                            <div class="slide" data-active>
+                            <button class="carousel_btn prev" onclick="prevSlide(-1)" data-carousel-button="prev">&#8249;</button>
+                            <button class="carousel_btn next" onclick="nextSlide(1)" data-carousel-button="next">&#8250;</button>
+                            <div class="slide" id="first_slides" data-active>
                                 <li class="slide_item"><img src="images/showcase1.jpg" alt="slide #1"></li>
                                 <li class="slide_item"><img src="images/showcase2.jpg" alt="slide #2"></li>
                                 <li class="slide_item"><img src="images/showcase3.jpg" alt="slide #3"></li>
                                 <li class="slide_item"><img src="images/showcase4.jpg" alt="slide #4"></li>
                             </div>
-                            <div class="slide">
+                            <div class="slide" id="second_slides">
                                 <li class="slide_item"><img src="images/showcase5.jpg" alt="slide #5"></li>
                                 <li class="slide_item"><img src="images/showcase6.jpg" alt="slide #6"></li>
                                 <li class="slide_item"><img src="images/showcase7.jpg" alt="slide #7"></li>
                                 <li class="slide_item"><img src="images/showcase8.jpg" alt="slide #8"></li>
+                            </div>
+                            <div class="dots-con">
+                                <span class="dot"></span><span class="dot"></span>
+                                <span class="dot"></span><span class="dot"></span>
                             </div>
                         </div>
                     </div>
@@ -279,40 +290,65 @@
             <br><br>
             <div class="container">
                 <div class="tool_cards">
-                    <div class="tool_card">
-                        <div class="fas custom_icon">&#xf3fd;</div>
-                        <div class="tool_card_title">Панели управления</div>
-                        <div class="tool_card_content"><p>Utise wisi enim minim veniam, quis et</p><p>stationes ullamcorper suscipit ets lobotis</p><p>nisle consequat nihis etim.</p></div>
+                    <div class="animate__animated card_fade">
+                        <div class="tool_card_wrap">
+                            <div class="tool_card">
+                                <div class="fas custom_icon">&#xf3fd;</div>
+                                <div class="tool_card_title">Панели управления</div>
+                                <div class="tool_card_content"><p>Utise wisi enim minim veniam, quis et</p><p>stationes ullamcorper suscipit ets lobotis</p><p>nisle consequat nihis etim.</p></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="tool_card">
-                        <div class="fas custom_icon">&#xf201;</div>
-                        <div class="tool_card_title">Лёгкий интерфейс</div>
-                        <div class="tool_card_content"><p>Utise wisi enim minim veniam, quis et</p><p>stationes ullamcorper suscipit ets lobotis</p><p>nisle consequat nihis etim.</p></div>
+                    <div class="animate__animated card_fade">
+                        <div class="tool_card_wrap">
+                            <div class="tool_card">
+                                <div class="fas custom_icon">&#xf201;</div>
+                                <div class="tool_card_title">Лёгкий интерфейс</div>
+                                <div class="tool_card_content"><p>Utise wisi enim minim veniam, quis et</p><p>stationes ullamcorper suscipit ets lobotis</p><p>nisle consequat nihis etim.</p></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="tool_card">
-                        <div class="fas custom_icon">&#xf0f3;</div>
-                        <div class="tool_card_title">Умные оповещения</div>
-                        <div class="tool_card_content"><p>Utise wisi enim minim veniam, quis et</p><p>stationes ullamcorper suscipit ets lobotis</p><p>nisle consequat nihis etim.</p></div>
+                    <div class="animate__animated card_fade">
+                        <div class="tool_card_wrap">
+                            <div class="tool_card">
+                                <div class="fas custom_icon">&#xf0f3;</div>
+                                <div class="tool_card_title">Умные оповещения</div>
+                                <div class="tool_card_content"><p>Utise wisi enim minim veniam, quis et</p><p>stationes ullamcorper suscipit ets lobotis</p><p>nisle consequat nihis etim.</p></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <br><br><br>
-                <div class="tool_cards">
-                    <div class="tool_card">
-                        <div class="fas custom_icon">&#xf4c0;</div>
-                        <div class="tool_card_title">Контроль стоимости</div>
-                        <div class="tool_card_content"><p>Utise wisi enim minim veniam, quis et</p><p>stationes ullamcorper suscipit ets lobotis</p><p>nisle consequat nihis etim.</p></div>
+                
+                <!-- <br><br><br> -->
+                <!-- <div class="tool_cards"> -->
+                    <div class="animate__animated card_fade">
+                        <div class="remove_border">
+                            <div class="tool_card">
+                                <div class="fas custom_icon">&#xf4c0;</div>
+                                <div class="tool_card_title">Контроль стоимости</div>
+                                <div class="tool_card_content"><p>Utise wisi enim minim veniam, quis et</p><p>stationes ullamcorper suscipit ets lobotis</p><p>nisle consequat nihis etim.</p></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="tool_card">
-                        <div class="fas custom_icon">&#xf135;</div>
-                        <div class="tool_card_title">Уникальные возможности</div>
-                        <div class="tool_card_content"><p>Utise wisi enim minim veniam, quis et</p><p>stationes ullamcorper suscipit ets lobotis</p><p>nisle consequat nihis etim.</p></div>
+                    <div class="animate__animated card_fade">
+                        <div class="remove_border">
+                            <div class="tool_card">
+                                <div class="fas custom_icon">&#xf135;</div>
+                                <div class="tool_card_title">Уникальные возможности</div>
+                                <div class="tool_card_content"><p>Utise wisi enim minim veniam, quis et</p><p>stationes ullamcorper suscipit ets lobotis</p><p>nisle consequat nihis etim.</p></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="tool_card">
-                        <div class="fab">&#xf3e8;</div>
-                        <div class="tool_card_title">Поддержка по любым вопросам</div>
-                        <div class="tool_card_content"><p>Utise wisi enim minim veniam, quis et</p><p>stationes ullamcorper suscipit ets lobotis</p><p>nisle consequat nihis etim.</p></div>
+                    <div class="animate__animated card_fade">
+                        <div class="remove_border">
+                            <div class="tool_card">
+                                <div class="fab">&#xf3e8;</div>
+                                <div class="tool_card_title">Поддержка по любым вопросам</div>
+                                <div class="tool_card_content"><p>Utise wisi enim minim veniam, quis et</p><p>stationes ullamcorper suscipit ets lobotis</p><p>nisle consequat nihis etim.</p></div>
+                            </div>
+                        </div>
                     </div>
                 </div>    
+                <!-- </div>     -->
             </div><br><br><br><br><br><br>
             <hr>
             <div class="container tools_2">
@@ -350,6 +386,9 @@
                 </div>
                 <div class="contact_us">
                     <div class="tool_title">Как нас найти</div>
+                    <div class="map">
+                        
+                    </div>
                     <div class="tool_card_title">Центральный офис</div>
                     <p class="adress"><i class="fas">&#xf3c5;</i> г. Бишкек, ул. Тыныстанова 197/1</p>
                     <p class="web_adress"><i class="fas">&#xf0e0;</i> <a href="">office@daryger.kg</a></p>

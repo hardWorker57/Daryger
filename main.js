@@ -13,8 +13,10 @@ const sectionOneObserver = new IntersectionObserver
     entries.forEach(entry => {
         if (!entry.isIntersecting) {
             header.classList.add("nav_scrolled");
+            menuBtn.classList.add('scrolled_menu');
         } else {
             header.classList.remove("nav_scrolled");
+            menuBtn.classList.remove('scrolled_menu');
         }
     });
 },
@@ -74,3 +76,34 @@ $(window).scroll(function () {
     });
 });
 
+$(window).scroll(function () {
+    $('.card_fade').each(function () {
+        let imagePos = $(this).offset().top;
+        let topOfWindow = $(window).scrollTop();
+        if (imagePos < topOfWindow+800) {
+            $(this).addClass('animate__fadeInUp');
+        }
+    });
+});
+
+//burger-menu
+
+const menu = document.querySelector('.menu__body')
+const menuBtn = document.querySelector('.burger_menu')
+
+const body = document.body;
+
+if (menu && menuBtn) {
+    menuBtn.addEventListener('click', () => {
+        menu.classList.toggle('active')
+        menuBtn.classList.toggle('active')
+        body.classList.toggle('lock')
+    })
+    menu.querySelectorAll('.menu_list').forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('active')
+            menuBtn.classList.remove('active')
+            body.classList.remove('lock')
+        })
+    })
+}

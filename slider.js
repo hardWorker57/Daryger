@@ -1,20 +1,54 @@
 //slider
 
-const buttons = document.querySelectorAll("[data-carousel-button]")
+// const buttons = document.querySelectorAll("[data-carousel-button]");
+// let slides = document.getElementsByClassName('slide');
 
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    const offset = button.dataset.carouselButton === "next" ? 1 : -1
-    const slides = button
-      .closest("[data-carousel]")
-      .querySelector("[data-slides]")
+// buttons.forEach(button => {
+//   button.addEventListener("click", () => {
 
-    const activeSlide = slides.querySelector("[data-active]")
-    let newIndex = [...slides.children].indexOf(activeSlide) + offset
-    if (newIndex < 0) newIndex = slides.children.length - 1
-    if (newIndex >= slides.children.length) newIndex = 0
+//     slides.this
+//     // const offset = button.dataset.carouselButton === "next" ? 1 : -1
+//     // const slides = button
+//     //   .closest("[data-carousel]")
+//     //   .querySelector("[data-slides]")
 
-    slides.children[newIndex].dataset.active = true
-    delete activeSlide.dataset.active
-  })
-})
+//     // const activeSlide = slides.querySelector("[data-active]")
+//     // let newIndex = [...slides.children].indexOf(activeSlide) + offset
+//     // if (newIndex < 0) newIndex = slides.children.length - 1
+//     // if (newIndex >= slides.children.length) newIndex = 0
+
+//     // slides.children[newIndex].dataset.active = true
+//     // delete activeSlide.dataset.active
+//   })
+// })
+
+let slides = document.querySelectorAll('.slide');
+let dots = document.querySelectorAll('dot');
+let index = 0;
+
+function prevSlide(n) {
+  index += n;  
+  console.log("prevSlide is called");
+  changeSlide();
+}
+
+function nextSlide(n) {
+  index += n;
+  changeSlide();
+}
+
+function changeSlide() {
+  if (index > slides.length - 1)
+    index = 0;
+  if (index < 0)
+    index = slides.length - 1;
+  
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = 'none';
+
+      dots[i].classList.remove('active');
+      
+    }
+  slides[index].style.display = 'block';
+  dots[index].classList.add('active');
+}
