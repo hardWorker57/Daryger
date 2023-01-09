@@ -16,9 +16,6 @@ html {
   color: inherit;
   text-decoration: none;
 }
-* li {
-  list-style: none;
-}
 
 body {
   font-family: "Roboto", sans-serif;
@@ -96,10 +93,12 @@ hr {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 1450px) {
   body {
     font-size: 14px;
   }
+}
+@media screen and (max-width: 768px) {
   .about_block_3 {
     border-bottom-left-radius: 0.8em;
     border-bottom-right-radius: 0.8em;
@@ -107,8 +106,26 @@ hr {
     border-top-left-radius: none;
   }
 }
+@media (max-width: 1240px) {
+  body {
+    font-size: 13px;
+  }
+}
+.arrow_up {
+  position: fixed;
+  bottom: 30px;
+  right: 5px;
+  padding: 5px 14px;
+  font-size: 2.5em;
+  border-radius: 100%;
+  background-color: #183c68;
+  cursor: pointer;
+  z-index: 999;
+}
+
 header {
-  background-color: rgb(197, 193, 193);
+  color: #000;
+  background-color: rgb(255, 255, 255);
   position: fixed;
   top: 0;
   left: 0;
@@ -137,9 +154,12 @@ header {
 
 .menu {
   display: flex;
-  gap: 2rem;
+  gap: 1.2rem;
 }
-@media (max-width: 1320px) {
+.menu li {
+  list-style: none;
+}
+@media (max-width: 1440px) {
   .menu {
     flex-direction: column;
     padding: 30px;
@@ -151,7 +171,7 @@ header {
 .menu_list {
   transition: 0.5s;
 }
-@media (max-width: 1320px) {
+@media (max-width: 1440px) {
   .menu_list {
     display: block;
     font-size: 30px;
@@ -167,12 +187,12 @@ header {
   opacity: 1;
 }
 
-@media (max-width: 1320px) {
+@media (max-width: 1440px) {
   .menu__body {
     position: absolute;
-    top: 0;
+    top: -1em;
     left: -100%;
-    height: 100vh;
+    height: 102vh;
     width: 100%;
     background-color: #4dd7c4;
     display: flex;
@@ -184,7 +204,7 @@ header {
   left: 0;
 }
 
-@media (max-width: 1320px) {
+@media (max-width: 1440px) {
   .burger_menu {
     display: block;
     right: 0;
@@ -200,8 +220,8 @@ header {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #fff;
-    transition: all 0.2s;
+    background-color: #000;
+    transition: all ease 0.2s;
   }
   .burger_menu span:first-child {
     top: 0;
@@ -240,20 +260,55 @@ header {
 }
 
 #home {
-  background-color: rgb(197, 193, 193);
-  min-height: 660px;
+  color: #000;
+  background-color: rgb(255, 255, 255);
+  min-height: 500px;
   min-width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-bottom-left-radius: 4em;
   border-bottom-right-radius: 4em;
   margin-top: 3.4em;
 }
 
 .home_container {
-  max-width: 30em;
   padding-top: 4em;
+  display: flex;
+  gap: 1.5em;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-inline: auto;
+}
+
+@media (max-width: 1480px) {
+  .home__video {
+    width: 350px;
+    height: 270px;
+  }
+}
+@media (max-width: 1215px) {
+  .home__video {
+    width: 300px;
+    height: 250px;
+  }
+}
+@media (max-width: 1145px) {
+  .home__video {
+    width: 270px;
+    height: 145px;
+  }
+}
+
+.home__left {
+  max-width: 30em;
   display: flex;
   flex-direction: column;
   gap: 1.5em;
+  margin-inline: auto;
+}
+
+.home__right {
+  margin-inline: auto;
 }
 
 .home_title {
@@ -262,6 +317,7 @@ header {
 }
 
 #about {
+  margin-top: 7em;
   color: #000;
   min-height: 35em;
 }
@@ -451,6 +507,9 @@ header {
   border-bottom: 0.2em solid rgba(0, 0, 0, 0);
   margin-inline: auto;
 }
+.price_card li {
+  list-style: none;
+}
 
 .price_card:hover {
   border-bottom: 0.2em solid #3fb2ab;
@@ -573,6 +632,9 @@ header {
 
 #clients_1 {
   background-color: #4dd7c4;
+}
+#clients_1 li {
+  list-style: none;
 }
 
 .our_achievements {
@@ -772,6 +834,9 @@ header {
   margin-top: 10em;
   flex-wrap: wrap;
   gap: 1em;
+}
+.tools_2 li {
+  list-style: none;
 }
 
 .tool_block {

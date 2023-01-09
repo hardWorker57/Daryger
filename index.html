@@ -10,14 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300;400&display=swap" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="images/icons8-земной-шар-48.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/babcead3a0.js" crossorigin="anonymous"></script>
-    <script src="slider.js" defer></script>
+    <!-- <script src="slider.js" defer></script> -->
     <title>Daryger</title>
     
 </head>
 <body>
     <div class="wrapper">
+        <div class="arrow_up">
+            <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
 
         <!-- header -->
 
@@ -34,11 +38,13 @@
                         <div class="menu__body">
                             <div class="menu">
                                 <a href="#home" class="menu_list">Главная</a>
-                                <a href="#about" class="menu_list">Платформа</a>
-                                <a href="#price" class="menu_list">Цены</a>
-                                <a href="#team" class="menu_list">Команда</a>
-                                <a href="#clients" class="menu_list">Клиенты</a>
-                                <a href="#tools" class="menu_list">Инструменты</a>
+                                <a href="#about" class="menu_list">О системе</a>
+                                <a href="#price" class="menu_list">Запуск</a>
+                                <a href="#team" class="menu_list">Наши клиенты</a>
+                                <a href="#clients" class="menu_list">Отзывы</a>
+                                <a href="#tools" class="menu_list">Тарифы</a>
+                                <a href="#q&a" class="menu_list">Вопрос-Ответ</a>
+                                <a href="#contact" class="menu_list">Техпод</a>
                                 <a href="#news" class="menu_list">Новости</a>
                                 <a href="#contact" class="menu_list">Контакты</a>
                             </div>
@@ -51,39 +57,64 @@
         </header>
         <section id="home" class="home">
             <div class="container">
-                <div class="home_container hidden">
-                    <div class="home_title">Представляем Daryger, Платформу для цифровой трансформации</div>
-                    <div class="home_content">Daryger спроектирован с учётом реалий рынка Кыргызстана и включает полный набор модулей для построения цифрового двойника клиники.</div>
-                    <div class="button_wrap"><a href="#" class="button">Попробовать</a></div>
+                <div class="home_container">
+                    <div class="home__left">
+                        <div class="home_title">Представляем Daryger, Платформу для цифровой трансформации</div>
+                        <div class="home_content">Daryger спроектирован с учётом реалий рынка Кыргызстана и включает полный набор модулей для построения цифрового двойника клиники.</div>
+                        <div class="button_wrap"><a href="#contact" class="button">Попробовать</a></div>                        
+                    </div> 
+                    <div class="home__right">
+                        <video width="550px" height="300px" controls class="home__video">
+                            <source src="videos/Daryger-video.mp4">
+                            your browser doesn't support it
+                        </video>
+                    </div>
                 </div>
             </div>
         </section> <br>
 
         <!-- about -->
 
-        <section id="about" class="hidden">
+        <section id="about">
             <div class="animate__animated mov">
                 <div class="container">
-                    <div class="block_title">Интегрированное решение для частных клиник</div>
-                    <div class="block_content">Сокращает время на внутренние коммуникации.</div>
+                    <div class="block_title">Эффективное управление современной клиникой-медицинская CRM система.</div>
                     <div class="cards">
-                        <div class="card">
-                            <div class="card_image"><img src="images/main-service1.png" alt="" class="about_image"></div>
-                            <div class="card_title">Документы</div>
-                            <div class="card_content">Амбулаторный протокол от 30 секунд. История болезни от 10 минут. Эпикриз от 2 минут.</div>
-                            <div class="card_button"><a href="#" class="button">Daryger для врачей</a></div>
-                        </div>
                         <div class="card">
                             <div class="card_image"><img src="images/main-service2.png" alt="" class="about_image"></div>
                             <div class="card_title">Финансы</div>
-                            <div class="card_content">Сократить расходы, привлечь пациентов, найти точки роста, увеличить выручку.</div>
-                            <div class="card_button"><a href="#" class="button">Daryger для продаж</a></div>
+                            <div class="card_content">
+                                <ul>
+                                    <li>Увеличить прибыль до 40-50%</li>
+                                    <li>Найти точки роста</li>
+                                    <li>Сократить расходы от 10%</li>
+                                </ul>
+                            </div>
+                            <div class="card_button"><a href="#contact" class="button">ПОЛУЧИ СКИДКУ</a></div>
+                        </div>
+                        <div class="card">
+                            <div class="card_image"><img src="images/main-service1.png" alt="" class="about_image"></div>
+                            <div class="card_title">Документы</div>
+                            <div class="card_content">
+                                <ul>
+                                    <li>Амбулаторные протоколы-от 1 минуты</li>
+                                    <li>История болезни- от 10 минут</li>
+                                    <li>Отчеты, журналы, бланки</li>
+                                </ul>
+                            </div>
+                            <div class="card_button"><a href="#contact" class="button">СВЯЗАТЬСЯ С НАМИ</a></div>
                         </div>
                         <div class="card">
                             <div class="card_image"><img src="images/main-service3.png" alt="" class="about_image"></div>
-                            <div class="card_title">Пациенты</div>
-                            <div class="card_content">Панель состояния пациента. Контроль приёма назначений. Контроль пациента вне клиники.</div>
-                            <div class="card_button"><a href="#" class="button">Daryger для пациента</a></div>
+                            <div class="card_title">Развитие</div>
+                            <div class="card_content">
+                                <ul>
+                                    <li>Доступ к расписанию и услугам клиники из любой точки</li>
+                                    <li>Онлайн запись</li>
+                                    <li>Забота о пациенте вне клиники</li>
+                                </ul>
+                            </div>
+                            <div class="card_button"><a href="#contact" class="button">ПОЛУЧИ СКИДКУ</a></div>
                         </div>
                     </div>
                 </div> <br>
@@ -122,14 +153,20 @@
                 </div>
             </div>
             <div class="container">
-                <div class="about_wrap">
-                    <div class="about_3">
-                        <div class="about_video"><img src="images/img2.jpg" alt="" class="cut_image_left responsive_img"></div> 
-                        <div class="about_block about_block_3">
-                            <div class="about_block_title">Система управления важными метриками в реальном времени.</div>
-                            <div class="about_block_content">Мир изменился. Бизнес стал гибче, больше взаимодействует с целевой аудиторией и внедряет инновации как никогда раньше - особенно цифровые. Пришло время рынка покупателя.</div>
-                            <div class="about_block_content">Daryger спроектирован с учётом реалий рынка Кыргызстана и включает полный набор модулей для построения цифрового двойника клиники.</div>
+                <div class="about">
+                    <div class="block_title">О СИСТЕМЕ</div>
+                    <div class="about_block">
+                        <div class="about_left">
+                            <ul>
+                                <li>Надежная платформа для оперативного управления и организации работы частной <br>клиники. Легко настраивается под ваши бизнес-процессы и помогает анализировать и <br>улучшать работу каждого сотрудника. Работает онлайн с любого устройства.</li>
+                                <li>Детальная аналитика эффективности вашей клиники</li>
+                                <li>Управление рабочими графиками и медицинской документацией</li>
+                                <li>Единая база пациентов</li>
+                                <li>Коммуникация и сопровождение пациентов вне клиники</li>
+                                <li>Полное сопровождение при внедрении</li>
+                            </ul>
                         </div>
+                        <!-- <div class="about_right"><img src="images/img4.jpg" alt="" srcset="" height="150px" width="200px"></div> -->
                     </div>
                 </div>
             </div>
@@ -137,7 +174,7 @@
 
         <!-- price -->
 
-        <section id="price" class="hidden">
+        <section id="price">
             <div class="container">
                 <div class="block_title">Тарифы для клиник от 2 до 200 сотрудников</div>
                 <div class="block_content">Вернём деньги, если за 30 дней не произойдет улучшений.</div>
@@ -386,9 +423,7 @@
                 </div>
                 <div class="contact_us">
                     <div class="tool_title">Как нас найти</div>
-                    <div class="map">
-                        
-                    </div>
+                    <div class="map js-map"></div>
                     <div class="tool_card_title">Центральный офис</div>
                     <p class="adress"><i class="fas">&#xf3c5;</i> г. Бишкек, ул. Тыныстанова 197/1</p>
                     <p class="web_adress"><i class="fas">&#xf0e0;</i> <a href="">office@daryger.kg</a></p>
@@ -409,6 +444,7 @@
             </div>
         </footer>
     </div>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="main.js"></script>
 </body>
 </html>

@@ -19,9 +19,6 @@ html {
         color: inherit;
         text-decoration: none;
     }
-    li {
-        list-style: none;
-    }
     box-sizing: border-box;
 }
 body {
@@ -76,23 +73,43 @@ hr {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 1450px) {
     body {
         font-size: 14px;
     }
+}
+
+@media screen and (max-width: 768px) {
     .about_block_3 {
         border-bottom-left-radius: 0.8em;
         border-bottom-right-radius: 0.8em;
         border-top-right-radius: none;
         border-top-left-radius: none;
     }
+}
+@media (max-width: 1240px) {
+    body {
+        font-size: 13px;
+    }
+}
 
+.arrow_up {
+    position: fixed;
+    bottom: 30px;
+    right: 5px;
+    padding: 5px 14px;
+    font-size: 2.5em;
+    border-radius: 100%;
+    background-color: $blue-text;
+    cursor: pointer;
+    z-index: 999;
 }
 
 //header
 
 header {
-    background-color: rgb(197, 193, 193);
+    color: #000;
+    background-color: rgb(255, 255, 255);
     position: fixed;
     top: 0;
     left: 0;
@@ -116,8 +133,11 @@ header {
 }
 .menu {
     display: flex;
-    gap: 2rem;
-    @media (max-width: 1320px) {
+    gap: 1.2rem;
+    li {
+        list-style: none;
+    }
+    @media (max-width: 1440px) {
         flex-direction: column;
         padding: 30px;
         gap: 0;
@@ -126,7 +146,7 @@ header {
 }
 .menu_list {
     transition: 0.5s;
-    @media (max-width: 1320px) {
+    @media (max-width: 1440px) {
         display: block;
         font-size: 30px;
         line-height: 70px;
@@ -139,11 +159,11 @@ header {
     opacity: 1;
 }
 .menu__body {
-    @media (max-width: 1320px) {
+    @media (max-width: 1440px) {
         position: absolute;
-        top: 0;
+        top: -1em;
         left: -100%;
-        height: 100vh;
+        height: 102vh;
         width: 100%;
         background-color: $prime-color;
         display: flex;
@@ -155,7 +175,7 @@ header {
     }
 }
 .burger_menu {
-    @media (max-width: 1320px) {
+    @media (max-width: 1440px) {
         display: block;
         right: 0;
         width: 30px;
@@ -169,8 +189,8 @@ header {
             left: 0;
             width: 100%;
             height: 2px;
-            background-color: #fff;
-            transition: all .2s;
+            background-color: #000;
+            transition: all ease .2s;
             &:first-child {
                 top: 0;
             }
@@ -214,19 +234,47 @@ header {
 //home
 
 #home {
-    background-color: rgb(197, 193, 193);
-    min-height: 660px;
+    color: #000;
+    background-color: rgb(255, 255, 255);
+    min-height: 500px;
     min-width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-bottom-left-radius: 4em;
     border-bottom-right-radius: 4em;
     margin-top: 3.4em;
 }
 .home_container {
-    max-width: 30em;
     padding-top: 4em;
+    display: flex;
+    gap: 1.5em;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-inline: auto;
+}
+.home__video {
+    @media (max-width: 1480px) {
+        width: 350px;
+        height: 270px;
+    }
+    @media (max-width: 1215px) {
+        width: 300px;
+        height: 250px;
+    }
+    @media (max-width: 1145px) {
+        width: 270px;
+        height: 145px;
+    }
+}
+.home__left {
+    max-width: 30em;
     display: flex;
     flex-direction: column;
     gap: 1.5em;
+    margin-inline: auto;
+}
+.home__right {
+    margin-inline: auto;
 }
 .home_title {
     font-size: 2.5em;
@@ -235,6 +283,7 @@ header {
 
 //about 
 #about {
+    margin-top: 7em;
     color: $dark-text;
     min-height: 35em;
 }
@@ -399,6 +448,9 @@ header {
     transition: 0.5s;
     border-bottom: 0.2em solid rgba(0, 0, 0, 0);
     margin-inline: auto;
+    li {
+        list-style: none;
+    }
 }
 .price_card:hover {
     border-bottom: 0.2em solid $dark-prime-color;
@@ -513,6 +565,9 @@ header {
 //clients
 #clients_1 {
     background-color: $prime-color;
+    li {
+        list-style: none;
+    }
 }
 .our_achievements {
     padding: 0.3em 0;
@@ -685,6 +740,9 @@ header {
     margin-top: 10em;
     flex-wrap: wrap;
     gap: 1em;
+    li {
+        list-style: none;
+    }
 }
 .tool_block {
     max-width: 30em;
@@ -718,6 +776,10 @@ header {
     gap: 2em;
     flex-wrap: wrap;
 }
+// .map-js {
+//     width: 750px;
+//     height: 500px;
+// }
 .contact_us {
     display: flex;
     flex-direction: column;
