@@ -66,7 +66,7 @@ input::placeholder {
   text-align: center;
 }
 
-.mov, .movL, .mov_card, .mov_light {
+.mov, .movL, .mov_card, .mov_light, .card_fadeBasic {
   visibility: hidden;
 }
 
@@ -707,10 +707,13 @@ header {
   margin: 3em 0;
   justify-content: space-between;
   gap: 0.8em;
+  flex-wrap: wrap;
 }
 
 .achieve_card {
   display: flex;
+  margin-inline: auto;
+  width: 12em;
   flex-direction: column;
   align-items: center;
   font-size: 1.4em;
@@ -744,6 +747,11 @@ header {
   padding: 2em 1em;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   max-width: 30em;
+}
+@media (max-width: 768px) {
+  .clients_card {
+    max-width: 20em;
+  }
 }
 .clients_card .card_image {
   padding: 1em 0;
@@ -788,6 +796,16 @@ header {
   height: 3px;
   width: 4em;
   margin: 2em 0;
+}
+
+.support_card_2 {
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+.support_card_3 {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
 }
 
 .faq {
