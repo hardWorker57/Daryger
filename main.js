@@ -116,3 +116,34 @@ if (menu && menuBtn) {
 //         this.classList.remove('current_item');
 //     });
 // };
+
+//counter 
+let counts = setInterval(updated);
+let upto = 0;
+function updated() {
+    let count = document.getElementById('counter');
+    count.innerHTML = ++upto;
+    if (upto===100) {
+        clearInterval(counts, 10);
+    }
+};
+
+let counts2 = setInterval(updated2);
+let upto2 = 0;
+function updated2() {
+    let count2 = document.getElementById('counter2');
+    count2.innerHTML = ++upto2;
+    if (upto2===1000) {
+        clearInterval(counts2, 10);
+    }
+};
+
+let counts3 = setInterval(updated3);
+let upto3 = 99000;
+function updated3() {
+    let count3 = document.getElementById('counter3');
+    count3.innerHTML = ++upto3;
+    if (upto3===100000) {
+        clearInterval(counts3, 10);
+    }
+};

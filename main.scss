@@ -620,6 +620,95 @@ header {
     color: #21d4fd;
 }
 
+//achievements
+#achievements {
+    color: #000;
+}
+.achieve_title {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 1.5em;
+    color: red;
+}
+.achieve_cards {
+    display: flex;
+    margin: 3em 0;
+    justify-content: space-between;
+    gap: 0.8em;
+}
+.achieve_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.4em;
+    border-radius: 14px;
+    padding: 1em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#reviews {
+    color: #000;
+}
+.clients_cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5em;
+    flex-wrap: wrap;
+}
+.cards_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin: 2em 0;
+}
+.clients_card {
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    padding: 2em 1em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    max-width: 30em;
+    .card_image {
+        padding: 1em 0;
+        margin-inline: auto;
+    }
+}
+.reviews_content {
+    max-width: 80%;
+    margin-inline: auto;
+}
+.fa-dash {
+    color: red;
+}
+.card_content {
+    ul {
+      margin-top: 1em;  
+    }
+}
+
+//support
+#support {
+    color: #000;
+    margin: 2em 0;
+}
+.support_cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    flex-wrap: wrap;
+    margin-top: 3em;
+}
+.support_card {
+    max-width: 20em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1em;
+    margin: 2em 0;
+}
+.dash {
+    background-color: red;
+    height: 3px;
+    width: 4em;
+    margin: 2em 0;
+}
 
 //faq
 .faq {
