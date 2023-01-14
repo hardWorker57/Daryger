@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/babcead3a0.js" crossorigin="anonymous"></script>
-    <!-- <script src="slider.js" defer></script> -->
     <title>Daryger</title>
     
 </head>
@@ -481,6 +480,7 @@
                 </div>
             </div>
         </section>
+
         <!-- clients  -->
 
         <section id="clients" class="animate__animated mov">
@@ -490,31 +490,24 @@
                     <div class="block_content">There are many variations of passages of Lorem Ipsum available, but the majority<br>have suffered alteration, by injected humour, or new randomised words.</div>
                 </div>
                 <div class="clients_slider">
-                    <div class="carousel" data-carousel>
-                        <div class="slides" data-slides>
-                            <button class="carousel_btn prev" onclick="prevSlide(-1)" data-carousel-button="prev">&#8249;</button>
-                            <button class="carousel_btn next" onclick="nextSlide(1)" data-carousel-button="next">&#8250;</button>
-                            <div class="slide" id="first_slides" data-active>
-                                <li class="slide_item"><img src="images/showcase1.jpg" alt="slide #1"></li>
-                                <li class="slide_item"><img src="images/showcase2.jpg" alt="slide #2"></li>
-                                <li class="slide_item"><img src="images/showcase3.jpg" alt="slide #3"></li>
-                                <li class="slide_item"><img src="images/showcase4.jpg" alt="slide #4"></li>
-                            </div>
-                            <div class="slide" id="second_slides">
-                                <li class="slide_item"><img src="images/showcase5.jpg" alt="slide #5"></li>
-                                <li class="slide_item"><img src="images/showcase6.jpg" alt="slide #6"></li>
-                                <li class="slide_item"><img src="images/showcase7.jpg" alt="slide #7"></li>
-                                <li class="slide_item"><img src="images/showcase8.jpg" alt="slide #8"></li>
-                            </div>
-                            <div class="dots-con">
-                                <span class="dot"></span><span class="dot"></span>
-                                <span class="dot"></span><span class="dot"></span>
-                            </div>
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><li class="slide_item"><img src="images/showcase1.jpg" alt="slide #1"></li></div>
+                          <div class="swiper-slide"><li class="slide_item"><img src="images/showcase2.jpg" alt="slide #2"></li></div>
+                          <div class="swiper-slide"><li class="slide_item"><img src="images/showcase3.jpg" alt="slide #3"></li></div>
+                          <div class="swiper-slide"><li class="slide_item"><img src="images/showcase4.jpg" alt="slide #4"></li></div>
+                          <div class="swiper-slide"><li class="slide_item"><img src="images/showcase5.jpg" alt="slide #5"></li></div>
+                          <div class="swiper-slide"><li class="slide_item"><img src="images/showcase6.jpg" alt="slide #6"></li></div>
+                          <div class="swiper-slide"><li class="slide_item"><img src="images/showcase7.jpg" alt="slide #7"></li></div>
+                          <div class="swiper-slide"><li class="slide_item"><img src="images/showcase8.jpg" alt="slide #8"></li></div>
                         </div>
+                        <div class="swiper-button-next swiper_navBtn"></div>
+                        <div class="swiper-button-prev swiper_navBtn"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
-            <div id="clients_2"></div>
             <div id="clients_3">
                 <div class="container">
                     <div class="block_title check_list_title">Хочешь так же? <br>Оставь email и получи чеклист эффективности клиники.</div>
@@ -658,5 +651,46 @@
     </div>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="main.js"></script>
+    <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 4,
+          spaceBetween: 30,
+          slidesPerGroup: 4,
+          loop: true,
+          loopFillGroupWithBlank: true,
+          centerSlide: true,
+          fade: true,
+          grabCursor: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          autoplay: {
+            delay: 5000,
+          },
+          breakpoints: {
+            0: {
+                slidesPerView: 1,
+                slidesPerGroup: 1,
+            },
+            520: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+            },
+            950: {
+                slidesPerView: 3,
+            },
+          }
+        });
+      </script>
 </body>
 </html>
