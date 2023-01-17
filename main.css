@@ -596,6 +596,12 @@ header {
   position: relative;
   z-index: 10;
 }
+@media (max-width: 720px) {
+  .step_wizard_list {
+    flex-direction: column;
+    gap: 2em;
+  }
+}
 
 .step_wizard_item {
   padding: 0 20px;
@@ -619,6 +625,11 @@ header {
   height: 2px;
   transform: translateX(-50%);
   z-index: -10;
+}
+@media (max-width: 720px) {
+  .step_wizard_item + .step_wizard_item:after {
+    max-width: 1px;
+  }
 }
 
 .progress_count {
@@ -789,6 +800,7 @@ header {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 1em;
   margin: 2em 0;
+  margin-inline: auto;
 }
 
 .dash {
@@ -1078,6 +1090,10 @@ header {
 
 .tool_content .price_list {
   margin: 2rem 0 0 1.8rem;
+}
+
+#news {
+  color: #000;
 }
 
 #contact {
